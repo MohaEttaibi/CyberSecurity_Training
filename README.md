@@ -25,7 +25,7 @@ gobuster -w /opt/DirBuster-0.12/directory-list-2.3-medium.txt -u http://10.10.23
 ```
 /opt/enum4linux/enum4linux.pl -a http://10.10.23.195/
 ```
-* Password (`jay:armando` via Hydra with SHH)
+* Password (`jay:armando` via Hydra with SSH)
 ```
 hydra -l jan -P /opt/rock.txt ssh://10.10.23.195
 ```
