@@ -1,0 +1,125 @@
+Basic Linux Command
+# man ls
+# man -k passwd
+# man 5 passwd
+# apropos partition
+# ls
+# ls -al
+# cd
+# pwd
+# mkdri notes
+# cd notes
+# rm notes
+# mkdir -p test/{recon,exploit,report}
+
+Finding Files
+==============
+
+# echo $PATH
+# which usr
+# sudo updatedb
+# locate sbd.exe
+# sudo find / -name sbd*
+
+Kali Services
+=============
+
+# sudo systemctl start ssh
+
+start service on boot time
+# sudo systemctl enable ssh
+
+# sudo systemctl status ssh
+# sudo systemctl stop ssh
+
+# sudo systemctl start apache2
+# sudo ss -antlp | grep apache2
+
+List all services
+=================
+
+# sudo systemctl list-unit-files
+
+Installing/Removing/Searching Tools
+===================================
+
+# sudo apt update
+# sudo apt upgarde
+# apt-cache serach pure-ftpd
+# apt show resource-agents
+# sudo apt install pure-ftpd
+# sudo apt remove --purge pure-ftpd
+# sudo dpkg -i file_name.deb
+
+Environment Variables
+=====================
+
+# env
+# echo $PATH
+# echo $USER
+# echo $PWD
+# echo $HOME
+
+# export othervar="Global var"
+# echo $othervar
+
+# history
+# !1
+# !! 
+
+Piping and Redirection
+======================
+
+STDIN	
+# echo "Hello" > file.txt
+STDOUT	
+# wc -m < file.text  (count char)
+STDERR	
+# ls ./test > error.txt
+
+# cat file.txt | wc -m > count.txt
+
+# ls -la /usr/bin | grep zip
+# echo "I need to try hard" | sed "s/hard/harder"
+# echo "I need to learn hacking web app, mobiles app" | cut -f 2 -d ","
+# echo /etc/passwd
+# cut -d ":" -f 1 /etc/passwd
+# echo "hello::there::friend" | awk -F "::" {print $1, $3}
+
+Practice
+========
+# gunzip access_log.txt.gz
+# mv access_log.txt access.log
+# head access.log
+# wc -l access.log
+# cat access.log | cut -d " " -f 1 | sort -u
+# cat access.log | cut -d " " -f 1 | sort | uniq -c | sort -urn
+# cat access.log | grep '208.68.234.99' | cut -d "/"" -f 2 | uniq -c
+# cat access.log | grep '208.68.234.99' | grep '/admin/ ' | sort -u
+# cat access.log | grep '208.68.234.99' | grep -v '/admin' => HTTP 200
+
+
+Editing Files from the Command Line
+===================================
+
+:: nano 
+# nano file_name.txt 
+
+:: vi
+# vi file_name.txt
+i - insert mode
+ESC -  disable insert mode
+dd - delete current line
+yy - copy current line
+p - paste 
+x - delete current character
+:w - save and stay
+:q! - quite without saving
+:wq - save and quite
+
+
+
+
+
+
+
